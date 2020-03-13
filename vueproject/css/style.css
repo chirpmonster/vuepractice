@@ -1,0 +1,14 @@
+td{
+    border:1px solid gray;
+}
+table{
+    border-collapse:collapse;
+}
+#heropool{
+    margin:120px;
+}
+.text{
+    float:right;
+    height:10px;
+    width:120px;
+}

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vuetest</title>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <script src="../frame/vue.min.js"></script>
+</head>
+
+<body>
+    <div id="heropool">
+        <table width="300px">
+            <thead>
+            <tr>
+                <th>英雄名</th>
+                <th>血量</th>
+                <th>操作</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr v-for ="hero in heros">
+                <td width=33%>{{hero.name}}</td>
+                <td width=33%>{{hero.hp}}</td>
+                <td>
+                    <a href="#nowhere" @click="edit(hero)">修改</a>
+                    <a href="#nowhere" @click="deletehero(hero.id)">捶死</a>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="3">
+                    英雄名字:<input type="text"class="text" v-model="addhero.name">
+                    <br>
+                    血量:<input type="text" class="text" v-model="addhero.hp">
+                    <br>
+                    <button type="button" @click="add">增加</button>
+                </td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+<script type="text/javascript" src="../script/script.js"></script>
+</body>
+</html>
